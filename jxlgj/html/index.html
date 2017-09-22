@@ -1,0 +1,195 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>九星隆国际后台管理</title>
+    <link rel="stylesheet" href="../css/index.css" type="text/css" media="screen"/>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/tendina.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+<style>
+    .layout_top_header img {
+        height: 30px;
+        padding: 15px 13px;
+    }
+
+    /*!* 设置滚动条的样式 *!*/
+    /*::-webkit-scrollbar {*/
+    /*width: 5px;*/
+    /*}*/
+
+    /*!* 滚动槽 *!*/
+    /*::-webkit-scrollbar-track {*/
+    /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);*/
+    /*border-radius: 5px;*/
+    /*}*/
+
+    /*!* 滚动条滑块 *!*/
+    /*::-webkit-scrollbar-thumb {*/
+    /*width: 5px;*/
+    /*border-radius: 5px;*/
+    /*background: rgba(0, 0, 0, 0.2);*/
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);*/
+    /*}*/
+
+    /*::-webkit-scrollbar-thumb:window-inactive {*/
+    /*background: rgba(0, 0, 0, 0);*/
+    /*}*/
+</style>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<!--顶部-->
+<div class="layout_top_header">
+    <div class="themeName">
+        <!--九星隆国际-->
+        <img src="../images/logo.png" alt="">
+    </div>
+
+    <div id="ad_setting" class="ad_setting">
+        <a class="ad_setting_a" href="javascript:; ">
+            <i class="icon-user glyph-icon" style="font-size: 20px"></i>
+            <span id="adminName">王立乾</span>
+            <i class="icon-chevron-down glyph-icon"></i>
+        </a>
+        <ul class="dropdown-menu-uu" style="display:none" id="ad_setting_ul">
+            <li class="ad_setting_ul_li" id="adminInfo"><a href="javascript:;"><i class="icon-user glyph-icon"></i> 个人中心
+            </a></li>
+            <li class="ad_setting_ul_li logout"><a href="javascript:;"><i class="icon-signout glyph-icon"></i> <span
+                    class="font-bold">退出</span> </a></li>
+        </ul>
+    </div>
+</div>
+<!--顶部结束-->
+<!--菜单-->
+<div class="layout_left_menu">
+    <ul id="menu" style="padding: 10px 0">
+        <!--关于我们-->
+        <li class="childUlLi" id="aboutMe">
+            <a href="#" target="menuFrame" class="d1"><i class="glyph-icon icon-reorder"></i>关于我们</a>
+            <ul>
+                <li>
+                    <a href="studentAll.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>新动态
+                    </a>
+                </li>
+                <li>
+                    <a href="studentOperate.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>公司介绍
+                    </a>
+                </li>
+                <li>
+                    <a href="studentStatus.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>团队特色
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--展厅展馆-->
+        <li class="childUlLi" id="ztzg">
+            <a href="#" target="menuFrame" class="d1"><i class="glyph-icon icon-reorder"></i>展厅展馆</a>
+            <ul>
+                <!--<li>-->
+                <!--<a href="studentAll.html" target="menuFrame" class="d2">-->
+                <!--<i class="glyph-icon icon-chevron-right"></i>新增展厅展馆-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="studentAll.html" target="menuFrame" class="d2">-->
+                <!--<i class="glyph-icon icon-chevron-right"></i>发布展厅展馆信息-->
+                <!--</a>-->
+                <!--</li>-->
+                <li>
+                    <a href="studentOperate.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>管理展厅展馆信息
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--展会展览-->
+        <li class="childUlLi" id="zhzl">
+            <a href="#" target="menuFrame" class="d1"><i class="glyph-icon icon-reorder"></i>展会展览</a>
+            <ul>
+                <!--<li>-->
+                <!--<a href="studentAll.html" target="menuFrame" class="d2">-->
+                <!--<i class="glyph-icon icon-chevron-right"></i>发布展会展览信息-->
+                <!--</a>-->
+                <!--</li>-->
+                <li>
+                    <a href="studentOperate.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>管理展会展览信息
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--数字影片-->
+        <li class="childUlLi" id="szyp">
+            <a href="#" target="menuFrame" class="d1"><i class="glyph-icon icon-reorder"></i>数字影片</a>
+            <ul>
+                <!--<li>-->
+                <!--<a href="studentAll.html" target="menuFrame" class="d2">-->
+                <!--<i class="glyph-icon icon-chevron-right"></i>发布数字影片信息-->
+                <!--</a>-->
+                <!--</li>-->
+                <li>
+                    <a href="studentOperate.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>管理数字影片信息
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--联系我们-->
+        <li class="childUlLi" id="lxwm">
+            <a href="#" target="menuFrame" class="d1"><i class="glyph-icon icon-reorder"></i>联系我们</a>
+            <ul>
+                <li>
+                    <a href="studentAll.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>联系我们
+                    </a>
+                </li>
+                <li>
+                    <a href="studentOperate.html" target="menuFrame" class="d2">
+                        <i class="glyph-icon icon-chevron-right"></i>招聘人才
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--菜单-->
+<div id="layout_right_content" class="layout_right_content" style="overflow:hidden;">
+    <div class="route_bg">
+        <a href="#" id="d1"></a>
+        <i class="glyph-icon icon-chevron-right"></i>
+        <a href="#" id="d2"></a>
+        <a href="#"></a>
+    </div>
+    <div class="mian_content">
+        <div id="page_content">
+            <iframe id="menuFrame" name="menuFrame" style="overflow:visible;" scrolling="yes" frameborder="no"
+                    width="100%" height="100%">
+            </iframe>
+        </div>
+    </div>
+</div>
+<div class="layout_footer">
+    <p>Copyright © 2017 - 逸轩工作室</p>
+</div>
+</body>
+<script>
+    var H = window.innerHeight;
+    var menu = document.getElementsByClassName('layout_left_menu');
+    menu[0].style.height = H + 'px';
+    window.onresize = function () {
+        var H = window.innerHeight;
+        var menu = document.getElementsByClassName('layout_left_menu');
+        menu[0].style.height = H + 'px';
+    };
+</script>
+<script src="../libs/layer/layer.js"></script>
+<script src="../js/public.js"></script>
+<!--<script src="../js/index.js"></script>-->
+</html>

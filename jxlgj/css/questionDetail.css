@@ -1,0 +1,107 @@
+.container-fluid {
+    padding: 0 100px;
+    min-width: 768px !important;
+}
+.row {
+    border-top:1px solid rgb(187,189,191);
+    border-left: 1px solid rgb(228, 230, 285);
+    border-right: 1px solid rgb(228, 230, 285);
+    border-bottom: 1px solid rgb(228, 230, 285);
+    min-width: 768px !important;
+    background: rgb(251, 251, 253);
+}
+.left, .right {
+    display: inline-block;
+}
+
+.left {
+    min-width: 188.5px;
+    height: 100%;
+}
+
+.right {
+    min-width: 565.5px;
+    background: white;
+    padding: 0 30px;
+}
+
+.louzhu {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.louzhu img {
+    width: 100%;
+    height: 100%;
+}
+
+.face {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+}
+
+.question_title {
+    padding-top: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    min-height: 20px;
+}
+
+.question_content {
+    min-height: 94px;
+    margin-top: 5px;
+}
+
+.question_operate {
+    line-height: 20px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.question_operate span {
+    margin: 0 5px;
+}
+
+.pinlunqu {
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    margin: 20px 0;
+}
+.questionFooter {
+    /*border: 1px solid;*/
+    width: 100%;
+    height: 50px;
+    padding-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.questionFooter .pager{
+    margin: 10px 0;
+}
+.questionFooter .pager li {
+    line-height: 14px;
+    font-size: 12px;
+}
+#reply{
+    padding: 20px 30px;
+}
+#reply button{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+

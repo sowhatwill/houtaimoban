@@ -1,0 +1,152 @@
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* start editing from here */
+a {
+    text-decoration: none;
+}
+
+/* float left */
+.clear {
+    clear: both;
+}
+
+/* Add 5px bottom padding and a underline */
+nav.vertical ul li {
+    display: block;
+}
+
+/* vertical menu */
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+/* horizontal menu */
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 100%;
+    /*background: url(images/bg.jpg);*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.message.warning {
+    background: rgba(255, 255, 255, 0.33);
+    -moz-box-shadow: 0 0 0 1px rgba(56, 41, 32, 0.25);
+    -webkit-box-shadow: 0 0 0 1px rgba(56, 41, 32, 0.25);
+    box-shadow: 0 0 0 1px rgba(56, 41, 32, 0.25);
+    margin: 9% auto 0;
+    width: 350px;
+}
+
+.login-head {
+    padding: 2em 0;
+    background: rgb(54, 54, 54);
+    position: relative;
+}
+
+.login-head h1 {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0 23px;
+}
+
+.form {
+    padding: 3em 2em;
+    background: #F2F2F2;
+
+}
+
+.form li {
+    border: 2px ridge rgba(187, 185, 189, 0.11);
+    list-style: none;
+    margin-bottom: 12px;
+    background: #F0EEF0;
+
+}
+
+.icon {
+    background: url(images/icons.png) no-repeat 0px 0px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    float: right;
+    margin: 12px 9px 9px 0px;
+}
+
+.user {
+    background: url(images/icons.png) no-repeat 7px 1px;
+}
+
+.lock {
+    background: url(images/icons.png) no-repeat -22px 1px;
+}
+
+input[type="text"], input[type="password"] {
+    font-family: 'Droid Sans', sans-serif;
+    width: 70%;
+    padding: 0.5em 2em 0.5em 1em;
+    color: #B8B8B8;
+    font-size: 16px;
+    line-height: 20px;
+    outline: none;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+    color: rgb(54, 54, 54);
+}
+
+.submit h4 a {
+    float: left;
+    font-size: 16px;
+    color: #999;
+    font-weight: 400;
+    font-family: 'Droid Sans', sans-serif;
+    margin-top: 15px;
+    margin-left: 21px;
+}
+
+.submit h4 a:hover {
+    color: rgb(54, 54, 54);
+}
+
+.submit {
+    padding-top: 3em;
+}
+
+input[type="submit"] {
+    float: left;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+    padding: 12px 0px;
+    width: 35%;
+    font-size: 18px;
+    background: rgb(54, 54, 54);
+    border: 2px solid rgb(54, 54, 54);
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+}
+
+input[type="submit"]:hover {
+    background: #fff;
+    color: rgb(54, 54, 54);
+    border: 2px solid rgb(54, 54, 54);
+}

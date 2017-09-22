@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>登陆</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/login.css" rel="stylesheet" type="text/css" media="all"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<div class="message warning" style="min-width: 350px">
+    <div class="inset" style="min-width: 350px">
+        <div class="login-head">
+            <h1>新生智能报道系统
+                <small>--后台登录</small>
+            </h1>
+        </div>
+        <div class="form">
+            <ul>
+                <li>
+                    <input type="text" class="text" placeholder="账号" id="adminBH"><a href="#" class=" icon user"></a>
+                </li>
+                <div class="clear"></div>
+                <li>
+                    <input type="password" placeholder="密码" id="password"> <a href="#" class="icon lock"></a>
+                </li>
+            </ul>
+            <div class="clear"></div>
+            <div class="submit">
+                <input type="submit" id="submit" value="登录"
+                       style="padding: 0; height: 36px; line-height: 36px; font-size: 16px; ;">
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="libs/layer/layer.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script>
+    //在登录之前先清除所有的sessionStorage
+    sessionStorage.clear();
+    $('#submit').click(function () {
+        var adminBH = $('#adminBH').val();
+        var password = hex_md5($('#password').val());
+        $.ajax({
+            url: apiUrl + "/admin/adminLogin",
+            type: "post",
+            dataType: 'json',
+            data: {
+                adminbh: adminBH,
+                password: password
+            },
+            success: function (res) {
+                if (res.status != 1) {
+                    layer.msg(res.msg, {icon: 5});
+                } else {
+                    sessionStorage.adminName = res.data.name;
+                    sessionStorage.power = res.data.power;
+                    sessionStorage.adminMyself = res.data.adminbh;
+                    window.location.href = "html/index.html"
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    });
+</script>
+</html>
